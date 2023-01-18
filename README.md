@@ -38,30 +38,28 @@ z = 'James'
 ### Data Types
 
 There are different data types available in python such as
-> 1. Text Type - **str**
-> 2. Numeric Types - **int, float, complex**
-> 3. Sequence Types - **list, tuple**
-> 4. Mapping Type - **dict**
-> 5. Set Types - **set**
-> 6. Boolean Type - **bool**
+> - Text Type - **str**
+> - Numeric Types - **int, float, complex**
+> - Sequence Types - **list, tuple**
+> - Mapping Type - **dict**
+> - Set Types - **set**
+> - Boolean Type - **bool**
 
-##### 1. Text Type
 ```python
+# 1. Text Type
 >>> x = 'h1'
 >>> print(type(x))
 <class 'str'>
-```
 
-##### 2. Numeric Types
-```python
+# 2. Numeric Types
 >>> x = 42
 >>> print(type(x))
 <class 'int'>
 >>> x = 3.14
 >>> print(type(x))
 <class 'float'>
-```
-##### 3. Sequence Types
+
+# 3. Sequence Types
 ```python
 >>> x = [1,2,3,4]
 >>> print(type(x))
@@ -69,29 +67,55 @@ There are different data types available in python such as
 >>> x = (1,2,3,4)
 >>> print(type(x))
 <class 'tuple'>
-```
 
-##### 4. Mapping Types
-```python
+# 4. Mapping Types
 >>> x = {'name':'James','age':24}
 >>> print(type(x))
 <class 'dict'>
-```
 
-##### 5. Sets Types
-```python
+# 5. Sets Types
 >>> x = set(('James','Opel','James','Troy'))
 >>> print(type(x))
 <class 'set'>
-```
 
-##### 6. Boolean Types
-```python
+# 6. Boolean Types
 >>> x = False
 >>> print(type(x))
 <class 'bool'>
 ```
 
+# Python import module
+Python modules are .py files that contain Python code. Any python file can be module. Modules are used to group together related code in a project so you can use the same code in different file without writing the etire code.
+
+Modules, sometimes called **packges**, allow to reference pre-written code that can perform common tasks that can be helpful to solve programs.
+
+The syntax for the import statement is:
+```python
+import [module]
+```
+
+For example:
+> Using math module we can use many function like 
+> - ceil
+> - floor
+> - pow
+> - sqrt
+> - abs
+> - random
+
+```python
+import math
+
+# ceil function
+>> x = math.ceil(1.431)
+>> print(x)
+2
+
+# floor function
+>> x = math.floor(1.431)
+>> print(x)
+1
+```
 
 
 
