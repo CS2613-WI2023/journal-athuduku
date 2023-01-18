@@ -19,7 +19,7 @@ For example:
 while(<boolean expression>):
   <statement>
  ```
- **Note:** It is mainly used if we dont know how many times we should run this or util it not met the boolean expression
+ **Note:** It is mainly used if we dont know how many times we should run this or util it not met the boolean expression.
  
 
 # Vairables and Types
