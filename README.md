@@ -1,3 +1,6 @@
+# Introduction to Python
+Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional programming.
+
 # Syntax and Symantics
 
 ### Syntax
@@ -117,7 +120,42 @@ import math
 1
 ```
 
+# Unit Testing
+
+### About
+Unit testing is a method for testing software that looks at the smallest testable pieces of code, called units, which are tested for correct operation. By doing unit testing, we can verify that each part of the code, including helper functions that may not be exposed to the user, works correctly and as intended.
+
+### Importing Modules
+To get started building test functions, first we must need to import a library called **unittest** to use PyUnit.
+```python
+import unitest
+```
+
+### Python AssertEqual Method
+The **assertEqual()** is indeed a “unittest” utility method in Python that has been castoff to verify the equivalence of two possible values during unit testing. It helps to find out whether the function works properly or not. If the two input variables, strings, or values are equivalent, assertEqual() returns **true**; otherwise, it returns **false**.
+
+#### Example 1:
+This test case will call the function which casts the string to int and by using assertEquals() it checks the value returned by the function as well as the provided correct value when it matched both returned value and the final value it will return saying that
+>Ran 1 test in 0.001s <br/> OK
+
+```python
+import unittest
+
+def castString(string):
+    return int(string)
+
+class TestStringMethods(unittest.TestCase):
+    def test_split(self):
+        self.assertEqual(castString('1'),1,'Incorrect Casting')
+if __name__ == '__main__':
+    unittest.main()
+```
 
 
 
+# File I/O Handling
+To handle different types of files, it has different sets of rules and syntax. This file handling helps to read, write, and append to the files.<br/>
+<br/>There are two types of data files such as:
+- **Text files** - A text file consists of human readable characters, which can be opened by any text editor. 
+-  **Binary files** - They are made up of non-human readable characters and symbols, which require specific programs to access its contents.
 
