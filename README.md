@@ -24,6 +24,14 @@ while(<boolean expression>):
  ```
  **Note:** It is mainly used if we don’t know how many times we should run this or until it has not met the Boolean expression.
  
+ >The general form of a For loop in python. For the semantics, it keeps on running inside the statement until the Boolean expression is False.
+
+```python
+for i in range(1,10):
+  <statement>
+ ```
+ **Note:** It is mainly used if we know how many times we should run this.
+ 
 
 # Variables and Types
 
@@ -120,6 +128,84 @@ import math
 1
 ```
 
+# Functions
+A function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+A function can return data as a result.
+
+### Creating a Function
+In python a function is defined by the keyword **def**.
+Its also similar to the method in other programming languages.
+```python
+def first_function():
+  print('Hello this function is called')
+first_function() # calling function
+```
+
+# Classes and Objects
+Python is an object-oriented programming language.
+Almost everything in Python is an object, with its properties and methods.
+A Class is like an object constructor or a "blueprint" for creating objects.
+
+### Creating a Class
+In python, the class is defined by the keyword **class**.
+```python
+class Math:
+ 
+ # constructor
+ def __init__(self,x,y):
+   self.x = x
+   self.y = y
+   
+ # methods or functions
+ def sum(self):
+   return self.x + self.y
+   
+ def subtract(self):
+   return self.x - self.y
+   
+ def divide(self):
+   return self.x / self.y
+   
+ def multiply(self):
+   return self.x * self.y
+   
+# creating the object for the class
+objectClass = Class(1,2)
+objectClass.add() # returns 3
+objectClass.multiply() # returns 2
+```
+
+The __init__() is a built-in function it is always called whenever we create an object instance for the class.
+So this class has a constructor which can set values inside the class and can be accessed easily by the functions. The **self** keyword is used to represent an instance of the given class which means that only the attributes and methods present inside the class can be accessible.
+
+### Inheriting a Class
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+<br/>
+<br/>
+**Parent class** is the class being inherited from, also called base class.
+<br/>
+**Child class** is the class that inherits from another class, also called derived class.
+
+#### Parent Class
+Any class can be a parent class, so the syntax is the same as creating any other class:
+```python
+class Animal:
+ def __init__(self,name):
+   self.name = name
+```
+#### Child Class
+To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class:
+```python
+class Dog(Animal):
+ def __init__(self,name):
+   super().__init__(name)
+   self.speak = 'Bow Bow'
+```
+**Note:** The **child's __init__()** function **overrides** the inheritance of the **parent's __init__() function** so if we create an object of child class it first calls the __init__() function in child class.
+
+By using the **super()** function, you do not have to use the name of parent element to call the methods, constructor,and variables, it will be automatically inherited from parent class. And also we dont need to pass the self on calling the __init__() of parent class.
+
 # Unit Testing
 
 ### About
@@ -160,3 +246,77 @@ To handle different types of files, it has different sets of rules and syntax. T
 -  **Binary files** - They are made up of non-human readable characters and symbols, which require specific programs to access its contents.
 
 Hence, in Python, a file operation takes place in the following order
+- Opening the file
+- Read or write (file operations)
+- Close the file
+
+There are different modes to open a file in Python<br/>
+- **r** - Open a file for reading. (default if not specified)
+- **w** - Open a file for writing. Creates a new file if it does not exist or overrides if the file exists 
+- **x**	- Open a file for exclusive creation. If the file already exists, the operation fails.
+- **a**	- Open a file for appending at the end of the file without truncating it. Creates a new file if it does not exist.
+- **t**	- Open in text mode. (default)
+- **b**	- Open in binary mode.
+- **+**	- Open a file for updating (reading and writing)
+
+### Opening Files in Python
+In python, we use the **open()** method to open files.<br/>
+To demonstrate how we open files in Python, let's suppose we have a file named 'data.txt' with the following content.
+But in a CSV file, we have to **import csv** first and then we need to call **reader()** or **writer()** method.
+
+### In Text File
+```python
+1 This file contains some data
+2 It's separated by lines
+```
+Now let's try to open this file to access the data inside the file using open() function.
+```python
+# for reading the file
+fileRead = open('data.txt','r') 
+
+# for writing into the file
+fileWrite = open('data.txt','w')
+
+# for appending the data without losing the existing data
+fileAppend = open('data.txt','a')
+```
+
+### In CSV File
+```python
+1 Name,Salary,Age
+2 James,60000,24
+3 Trish,67000,30![1](https://user-images.githubusercontent.com/122243218/214736535-a7eb0b0c-4b9c-46f6-bf9a-128e02a234ea.jpg)
+
+```
+Now let's try to open this file to access the data inside the file using open() function.
+```python
+# for reading the csv file
+import csv
+
+# for reading the data
+with open('data.txt','r') as fileRead:
+      reader = csv.reader(fileRead,delimiter=' ')
+      
+# for writing the data
+with open('data.txt','w') as fileWrite:
+      writer = csv.writer(fileWriter,delimiter=' ')
+```
+
+### Closing File
+When we are done performing operations on the file, we need to properly close the file.
+<br/>
+Closing a file will free up the resources that were tied to the file. It is done using the **close()** method in Python. For example,
+```python
+# open a file
+file1 = open("data.txt", "r")
+
+# read the file
+read_content = file1.read()
+print(read_content)
+
+# close the file
+file1.close()
+```
+
+# Conclusion
+
