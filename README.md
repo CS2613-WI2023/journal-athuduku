@@ -1,10 +1,10 @@
 # Introduction to Python
 Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional programming.
 
-# Syntax and Symantics
+# Syntax and Semantics
 
 ### Syntax
-The syntax of a programming language refers to the order to which different elements are combined to from valid expressions. It also the set of rules that defines how a Python code will be written and interpreted.
+The syntax of a programming language refers to the order in which different elements are combined to form valid expressions. It is also the set of rules that defines how a Python code will be written and interpreted.
 
 An example of a syntax rule for programming is the assignment statement:
 >The print() is a reserved keyword and we have to pass the variable inside it to print the value.
@@ -12,24 +12,24 @@ An example of a syntax rule for programming is the assignment statement:
 print(expression)
  ```
  
- ### Symantics
-Python uses emphasizes the meaning of a program, which uses dynamic semantics means that its variable are dynamic objects which we dont have to specify its data type while initializing the variable.
+ ### Semantics
+Python uses emphasizes the meaning of a program, which uses dynamic semantics means that its variable is dynamic object and we don’t have to specify its data type while initializing the variable.
 
 For example:
->The general form of a WHILE loop in python. For the symantics, it keep on running inside statement until the boolean expression is False.
+>The general form of a WHILE loop in python. For the semantics, it keeps on running inside the statement until the Boolean expression is False.
 
 ```python
 while(<boolean expression>):
   <statement>
  ```
- **Note:** It is mainly used if we dont know how many times we should run this or util it not met the boolean expression.
+ **Note:** It is mainly used if we don’t know how many times we should run this or until it has not met the Boolean expression.
  
 
-# Vairables and Types
+# Variables and Types
 
 ### Assigning Values To The Variables
 
-Variables hold values. In Python, variables do not require forward declaration - all you need to do is provide a variable name and assign it some value.
+Variables hold values. In Python, variables do not require forward declaration; you only need to provide a variable name and assign it some value.
 
 ```python
 p = 1.1
@@ -88,9 +88,9 @@ There are different data types available in python such as
 ```
 
 # Python import module
-Python modules are .py files that contain Python code. Any python file can be module. Modules are used to group together related code in a project so you can use the same code in different file without writing the etire code.
+Python modules are .py files that contain Python code. Any python file can be a module. Modules are used to group together related code in a project so you can use the same code in a different file without writing the entire code.
 
-Modules, sometimes called **packges**, allow to reference pre-written code that can perform common tasks that can be helpful to solve programs.
+Modules, sometimes called **packages**, allow referencing of pre-written code that can perform common tasks that can be helpful to solve programs.
 
 The syntax for the import statement is:
 ```python
@@ -98,7 +98,7 @@ import [module]
 ```
 
 For example:
-> Using math module we can use many function like 
+> Using the math module we can use many functions like 
 > - ceil
 > - floor
 > - pow
@@ -126,13 +126,13 @@ import math
 Unit testing is a method for testing software that looks at the smallest testable pieces of code, called units, which are tested for correct operation. By doing unit testing, we can verify that each part of the code, including helper functions that may not be exposed to the user, works correctly and as intended.
 
 ### Importing Modules
-To get started building test functions, first we must need to import a library called **unittest** to use PyUnit.
+To start building test functions, first, we must import a library called **unittest** to use PyUnit.
 ```python
 import unitest
 ```
 
 ### Python AssertEqual Method
-The **assertEqual()** is indeed a “unittest” utility method in Python that has been castoff to verify the equivalence of two possible values during unit testing. It helps to find out whether the function works properly or not. If the two input variables, strings, or values are equivalent, assertEqual() returns **true**; otherwise, it returns **false**.
+The **assertEqual()** is indeed a “unittest” utility method in Python that has been cast off to verify the equivalence of two possible values during unit testing. It helps to find out whether the function works properly or not. If the two input variables, strings, or values are equivalent, assertEqual() returns **true**; otherwise, it returns **false**.
 
 #### Example 1:
 This test case will call the function which casts the string to int and by using assertEquals() it checks the value returned by the function as well as the provided correct value when it matched both returned value and the final value it will return saying that
@@ -159,3 +159,4 @@ To handle different types of files, it has different sets of rules and syntax. T
 - **Text files** - A text file consists of human readable characters, which can be opened by any text editor. 
 -  **Binary files** - They are made up of non-human readable characters and symbols, which require specific programs to access its contents.
 
+Hence, in Python, a file operation takes place in the following order
