@@ -128,6 +128,84 @@ import math
 1
 ```
 
+# Lists
+Lists are used to store multiple items in a single variable.
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+<br/>
+<br/>
+Lists are created using square brackets:
+```python
+nameList = ['James','Trish','Opel']
+print(nameList) # prints ['James','Trish','Opel']
+```
+
+### Methods in List
+Some methods in the list can be useful to access and maniplate data easier than doing it manually. Some of them are len(), append(), pop(), sort() etc..
+```python
+# len() methods return the no of data in the list
+>>> nameList = ['James','Trish','Opel']
+>>> print(len(nameList))
+3
+
+# append() add the data to the end of the list
+>>> num = [1,2,3,4]
+>>> num.append(5)
+>>> print(num)
+[1,2,3,4,5]
+
+
+# pop() remove the data from the end of the list and returns the data
+>>> list = ['front','middle','end']
+>>> print(list.pop())
+'end'
+
+# sort() it sort the data in ascending or descending order
+# sort(reverse=True) it sorts in decending order
+# sort() by default it sorts ascending order
+>>> numbers = [4,1,2,6,5]
+>>> numbers.sort()
+>>> print(numbers)
+[1,2,4,5,6]
+```
+
+# Dictionaries
+Dictionaries are used to store data values in key:value pairs.
+A dictionary is a collection which is ordered, changeable and **do not allow duplicates**.
+
+**Note: Some important notes in dictionary:**
+- The keys in the dictionary should be unique, otherwise it will raise error. 
+- Its not like list, the data inside dictionary can have muliple data types.
+
+Dictionary are created using curly brackets:<br/>
+```python
+empDict = {'name':'James','Salary':60000,'Age':24}
+print(empDict) # it prints the dictionary
+```
+
+### Methods in Dictionary
+Some methods in the dictionary can be useful to access and maniplate items easier than doing it manually. Some of them items(), keys(), values(), etc..
+```python
+# len() methods return the no of keys in the dictionary
+>>> empDict = {'name':'James','Salary':60000,'Age':24}
+>>> print(len(empDict))
+3
+
+# items() it returns list of tuples with both key and value
+>>> empDict = {'name':'James','Salary':60000,'Age':24}
+>>> print(empDict.items())
+dict_items([('name', 'James'), ('Salary', 60000), ('Age', 24)])
+
+# keys() it returns the list of keys in the dictionary
+>>> empDict = {'name':'James','Salary':60000,'Age':24}
+>>> print(empDict.keys())
+dict_keys(['name', 'Salary', 'Age'])
+
+# values() it returns the list of values in the dictionary
+>>> empDict = {'name':'James','Salary':60000,'Age':24}
+>>> print(empDict.values())
+dict_values(['James', 60000, 24])
+```
+
 # Functions
 A function is a block of code which only runs when it is called.
 You can pass data, known as parameters, into a function.
@@ -318,5 +396,23 @@ print(read_content)
 file1.close()
 ```
 
+# Application Of Python Programming
+Python supports cross-platform OS, which make building applications with it is more convenient. Some of the apps made using pythons are:
+- Dropbox
+- Reddit
+- Spotify
+- Quora
+- Uber
+
+Some applications of pythons are web development, game development, data visualization, desktop GUI, automation, and more.
+
+
 # Conclusion
+Therefore the Python is widely used by many developers as its more easy in term of writing code, and has shorter syntax as compared to other object oriented languages.
+<br/>
+<br/>
+There are too many advantages such as:
+- Large developer community - Python is most used language in the world.
+- Extensive librries - Python offer wide variety of libraries which can make programming easier.
+- Writer less, and do more - It has very shorter syntax and easier to read.
 
